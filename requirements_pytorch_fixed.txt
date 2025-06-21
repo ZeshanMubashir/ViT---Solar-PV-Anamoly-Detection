@@ -1,0 +1,40 @@
+# PyTorch ViT Training Requirements - Fixed for NumPy Compatibility
+# Core PyTorch and Deep Learning
+torch>=2.0.0,<2.5.0
+torchvision>=0.15.0,<0.20.0
+torchaudio>=2.0.0,<2.5.0
+
+# Vision Transformers - Using TIMM only (no transformers to avoid TensorFlow conflicts)
+timm>=0.9.0,<1.0.0
+
+# Data Science and Visualization - Pin NumPy to 1.x
+numpy>=1.21.0,<2.0.0
+pandas>=1.3.0,<3.0.0
+matplotlib>=3.5.0,<4.0.0
+seaborn>=0.11.0,<1.0.0
+
+# Machine Learning Metrics
+scikit-learn>=1.0.0,<2.0.0
+
+# Progress Bars and Utilities
+tqdm>=4.64.0,<5.0.0
+
+# Image Processing
+Pillow>=9.0.0,<11.0.0
+
+# Jupyter Notebook Support
+jupyter>=1.0.0
+ipykernel>=6.15.0
+
+# Optional: If you need transformers later, install separately with:
+# pip install transformers --no-deps
+# pip install tokenizers
+# And avoid tensorflow imports
+
+# Installation instructions:
+# 1. First uninstall any conflicting packages:
+#    pip uninstall numpy tensorflow transformers -y
+# 2. Install requirements:
+#    pip install -r requirements_pytorch_fixed.txt
+# 3. Verify installation:
+#    python -c "import torch, timm, numpy; print('Success!')" 
